@@ -16,7 +16,7 @@ before_install:
 script: nyc npm run test && nyc report --reporter=text-lcov | coveralls
 deploy:
   - provider: npm
-    email: thiago@cruxframework.org
+    email: 281406674@qq.com
     api_key:
       secure: GTr1MpuxsDzKGJmkpLsRkPB6pCqM214RDp5N9orQ3pbRt7irQxvjZddLvJ+45beHY4+AvICM5rAchkAj7oW+tPSelFWTAOMZ36vLTDl1wbTIaD/bgwfOrFgVXyYWz6yRFrmqY7t3NuZBb0683k1SNNsLembz9vU5jo6S7wc/qjpxMYoZvjnSzH3GBn/c40BNc9LXXpn7k37in5Z7qRUYWUx8Z6aK1kuQl6bxuwVYSF/TdtxTVT+rHiNPHaNstgh2yA/XtdihM1H22ZJBTIvmTzoT1LmfKvkG6SKGb33GOTUDdQhgA3B3mXC+rwpfbjzFmWCC6DfKQXdv2Dtx4fVcsd1NNZmUEavxtGIqFlYRENOi1sqs6NRc8vXXPkitkmVtpcM6483cFSyR41cJ1ro3Xa5CeUOWKNI5F3+PuXFDti5cHvEgwVNHE3RAwKKGICZffsAgp7ywi/ne3leV78Y/M623DH+aPwbXBCddUHPx2B81ZMUj+cMof4HNzcl3VqE4vHJYqQo2CLcBwiac286LgxYas9v7N/wBE/dNgHNklGF/Ve4et00Wj0qQS3kUtXaoBS02XslvwoIPXYLErFP++jyLhLUzVrIabnUYOOXzdGIEOMbOjfLwRTOfGUn7z3GXqzpZMQ7tkMzfOlC9AXUFPwvbrk8uimHfkPrL10uymsg=
     skip_cleanup: true

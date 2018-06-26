@@ -1,5 +1,5 @@
 #!/bin/sh
-docker stop gateway
-docker rm gateway
+docker stop tree-gateway
+docker rm tree-gateway
 docker stop redis
 docker rm redis
