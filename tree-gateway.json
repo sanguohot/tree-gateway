@@ -3,7 +3,7 @@
     "database": {
         "redis": {
             "standalone": {
-                "host": "redis",
+                "host": "10.6.250.53",
                 "port": "6379"
             }
         }
@@ -17,6 +17,66 @@
                 "privateKey": "./key/privkey.pem",
                 "certificate": "./key/fullchain.pem"
             }
+        },
+        "admin": {
+            "protocol": {
+                "http": {
+                    "listenPort": 8001
+                }
+            },
+            "accessLogger": {
+                "msg": "HTTP {{req.method}} - {{res.statusCode}} - {{req.url}} ({{res.responseTime}}ms) ",
+                "console": {
+                    "timestamp": true,
+                    "colorize": true
+                },
+                "file": {
+                    "timestamp": true,
+                    "json": false,
+                    "prettyPrint": true,
+                    "outputDir": "./logs"
+                }
+            },
+            "userService": {
+                "jwtSecret": "secret"
+            },
+            "apiDocs": {
+                "path": "api-docs"
+            },
+            "cors" : {
+                "origin": {
+                    "allow": [{
+                        "value": "*"
+                    }]
+                }
+            }
+        },
+        "logger": {
+            "level": "info",
+            "console": {
+                "colorize": true
+            },
+            "file": {
+                "timestamp": true,
+                "outputDir": "./logs",
+                "json": false,
+                "prettyPrint": true
+            }
+        },
+        "accessLogger": {
+            "msg": "HTTP {{req.method}} - {{res.statusCode}} - {{req.url}} ({{res.responseTime}}ms) ",
+            "console": {
+                "timestamp": true,
+                "colorize": true
+            },
+            "file": {
+                "json": true,
+                "prettyPrint": true,
+                "outputDir": "./logs"
+            }
+        },
+        "analytics": {
+            "enabled": false
         }
     }
 }
