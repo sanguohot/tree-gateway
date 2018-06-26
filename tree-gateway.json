@@ -7,5 +7,14 @@
                 "port": "{REDIS_PORT_6379_TCP_PORT}"
             }
         }
+    },
+    "gateway": {
+        "protocol": {
+            "https": {
+                "listenPort": 2443,
+                "privateKey": "./key/privkey.pem",
+                "certificate": "./key/fullchain.pem"
+            }
+        }
     }
 }

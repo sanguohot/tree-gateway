@@ -14,8 +14,9 @@ RUN npm install
 COPY README.md tree-gateway.json rest.config ioc.config /usr/src/app/
 COPY ./lib /usr/src/app/lib/
 COPY ./dist /usr/src/app/dist/
+COPY ./key /usr/src/app/key/
 
-EXPOSE 8000 8001
+EXPOSE 8000 8001 2443
 
 VOLUME ["/usr/src/app/logs"]
 
